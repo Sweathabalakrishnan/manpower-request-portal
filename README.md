@@ -1,46 +1,50 @@
-📌 Manpower Request Portal (HRD System)
+🚀 Manpower Request Portal
 
-A full-stack Manpower Request Management System built using React, Node.js, Express, and MySQL.
-This system handles the complete hiring workflow with hierarchical approvals:
+A full-stack Manpower Request Management System designed to streamline hiring workflows with role-based approvals.
 
-👉 Requester → Manager → CTO → HR → Recruiter
+Built using React, Node.js, Express, and MySQL.
 
-🚀 Features
-👤 Role-Based Access
-Requester – Create manpower requests
-Manager – Approve / Reject requests
-CTO – Approve / Reject after Manager
-HR – Final approval + candidate selection
-Recruiter – Recruitment process handling
-📄 Request Workflow
-Requester creates request
-Manager reviews
-CTO reviews
-HR approves & adds candidate comments
-Recruiter processes hiring
-✅ Key Functionalities
-🔐 JWT Authentication (secure login)
-📊 Dashboard with request counts
-🔍 Search & filter requests
-📌 Status tracking (real-time)
-📝 Comments required on rejection
-🎯 Role-based visibility
-📜 Activity logs (audit trail)
-🎨 Clean UI with status badges
+📌 Overview
+
+This system allows organizations to manage manpower requests through a structured approval hierarchy:
+
+Requester → Manager → CTO → HR → Recruiter
+
+Each role has controlled access to view, approve, or process requests.
+
+✨ Features
+🔐 Authentication
+Secure login using JWT
+Role-based access control
+📄 Request Management
+Create manpower requests
+Auto-assign approval hierarchy
+Track request status in real-time
+✅ Approval Workflow
+Manager → CTO → HR sequential approvals
+Comments required for rejection
+HR adds candidate selection remarks
+📊 Dashboard
+Request counts (Total, Pending, Approved, Rejected)
+Clean UI with status indicators
+🔍 Search & Filters
+Search by request number, employee, designation
+Filter by status and department
+📜 Logs
+Complete audit trail for each request
 🛠 Tech Stack
-Frontend
-React.js
-CSS
-Backend
-Node.js
-Express.js
-Database
-MySQL
-Auth
-JWT (JSON Web Token)
-bcrypt (password hashing)
-
+Layer	Technology
+Frontend	React.js, CSS
+Backend	Node.js, Express
+Database	MySQL
+Auth	JWT, bcrypt
+📂 Project Structure
 manpower-portal/
+│
+├── backend/
+│   ├── server.js
+│   ├── db.js
+│   └── package.json
 │
 ├── frontend/
 │   ├── src/
@@ -53,39 +57,37 @@ manpower-portal/
 │   │   ├── api.js
 │   │   └── App.js
 │
-├── backend/
-│   ├── server.js
-│   ├── db.js
-│   └── package.json
-│
 └── README.md
-
-⚙️ Installation & Setup
-🔹 1. Clone Repository
+⚙️ Setup Instructions
+1️⃣ Clone Repository
 git clone https://github.com/your-username/manpower-portal.git
 cd manpower-portal
-🔹 2. Backend Setup
+2️⃣ Backend Setup
 cd backend
 npm install
-Create .env
+
+Create .env file:
+
 PORT=5000
 JWT_SECRET=your_secret_key
-Run server
-npm start
-🔹 3. Database Setup
 
-Open MySQL and run your SQL script:
+Run backend:
+
+npm start
+3️⃣ Database Setup
+
+Open MySQL and run:
 
 CREATE DATABASE hrd_portal;
 USE hrd_portal;
 
-👉 Then run your full schema (tables + inserts)
+Then execute your schema (tables + sample data).
 
-🔹 4. Frontend Setup
+4️⃣ Frontend Setup
 cd frontend
 npm install
 npm start
-🔑 Default Login Credentials
+🔑 Default Users
 Role	Email	Password
 Admin	admin@company.com
 	123456
@@ -99,37 +101,31 @@ HR	hr@company.com
 	123456
 Recruiter	recruiter@company.com
 	123456
-🔄 Workflow Logic
-Stage	Condition
-Manager	Sees own assigned requests
-CTO	Only after Manager Approved
-HR	Only after CTO Approved
-Recruiter	Only after HR Approved
-🎯 Status Flow
+🔄 Workflow
 Submitted
-→ Manager Approved / Rejected
-→ CTO Approved / Rejected
-→ HR Approved / Rejected
-→ Recruiter Received → In Progress → Closed
-📸 UI Highlights
-Dashboard cards (counts)
-Status color indicators:
+→ Manager Approval
+→ CTO Approval
+→ HR Approval
+→ Recruitment Process
+→ Closed
+🎨 Status Indicators
+🟡 Submitted
 🟢 Approved
 🔴 Rejected
-🟡 Pending
 🔵 In Progress
-⚠️ Important Notes
-Comments are mandatory for rejection
-HR must provide candidate details
-Role-based access is strictly enforced
-Requests are auto-assigned based on hierarchy
+⚫ Closed
+⚠️ Important Rules
+Rejection requires comments
+HR must provide candidate remarks
+Each role only sees assigned requests
+Approval flow is strictly hierarchical
 🚀 Future Enhancements
-📧 Email notifications
-📊 Analytics dashboard
-📎 Resume upload
-📱 Mobile responsive UI
-🔔 Notification system
-👨‍💻 Author
+Email notifications 📧
+Resume upload 📎
+Analytics dashboard 📊
+Notification system 🔔
+Mobile responsive UI 📱
+👨‍💻 DEVELOPED
 
 Sweatha B
 Infonet Comm
