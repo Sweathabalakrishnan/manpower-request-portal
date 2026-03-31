@@ -39,6 +39,8 @@ MySQL
 Auth
 JWT (JSON Web Token)
 bcrypt (password hashing)
+
+
 📂 Project Structure
 manpower-portal/
 │
@@ -59,6 +61,8 @@ manpower-portal/
 │   └── package.json
 │
 └── README.md
+
+
 ⚙️ Installation & Setup
 🔹 1. Clone Repository
 git clone https://github.com/your-username/manpower-portal.git
