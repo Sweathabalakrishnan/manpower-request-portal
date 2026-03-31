@@ -40,8 +40,6 @@ Auth
 JWT (JSON Web Token)
 bcrypt (password hashing)
 
-
-📂 Project Structure
 manpower-portal/
 │
 ├── frontend/
@@ -61,7 +59,6 @@ manpower-portal/
 │   └── package.json
 │
 └── README.md
-
 
 ⚙️ Installation & Setup
 🔹 1. Clone Repository
